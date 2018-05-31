@@ -1,0 +1,33 @@
+package:
+    name: ncdu
+    version: '1.13'
+source:
+    fn: ncdu-1.13.tar.gz
+    sha256: f4d9285c38292c2de05e444d0ba271cbfe1a705eee37c2b23ea7c448ab37255a
+    url: https://dev.yorhel.nl/download/ncdu-1.13.tar.gz
+build:
+    number: '0'
+    script: ./configure --prefix=${PREFIX} && make && make install
+    string: '0'
+requirements:
+    build: []
+    run: []
+about:
+    description: 'Ncdu is a disk usage analyzer with an ncurses interface. It is designed
+
+        to find space hogs on a remote server where you don''t have an entire
+
+        graphical setup available, but it is a useful tool even on regular desktop
+
+        systems. Ncdu aims to be fast, simple and easy to use, and should be able
+
+        to run in any minimal POSIX-like environment with ncurses installed.
+
+        '
+    doc_url: https://dev.yorhel.nl/ncdu/man
+    home: https://dev.yorhel.nl/ncdu
+    license: MIT
+    license_family: MIT
+    license_file: COPYING
+    summary: NCurses Disk Usage
+

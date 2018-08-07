@@ -1,0 +1,15 @@
+package:
+    name: datasette
+    version: '0.24'
+
+source:
+    git_url: https://github.com/simonw/datasette 
+
+about:
+    description: 'Datasette provides an instant, read-only JSON API for any SQLite database. It also provides tools for packaging the database up as a Docker container and deploying that container to hosting providers such as Zeit Now.
+Got CSV data? Use csvs-to-sqlite to convert them to SQLite, then publish them with Datasette. Or try Datasette Publish, a web app that lets you upload CSV data and deploy it using Datasette without needing to install any software.'
+    doc_url: http://datasette.readthedocs.io/ 
+    home: https://simonwillison.net/2017/Nov/13/datasette/
+    license: 'Apache License, Version 2.0' 
+    summary: 'An instant JSON API for your SQLite databases' 
+    author: 'Simon Willison'

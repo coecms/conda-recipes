@@ -2,6 +2,9 @@ package:
     name: datasette
     version: '0.24'
 
+build: 
+    number: '0'
+    script: python setup.py
 source:
     git_url: https://github.com/simonw/datasette 
 

@@ -1,0 +1,36 @@
+{% set version = "1.8.5" %}
+
+package:
+    name: nccmp
+    version: {{ version }}
+source:
+    fn: nccmp-master.tar.gz
+    sha256: 1ce20283bc55102537ca7494717214cf33023d547d62b5ff002c796a31b0f679
+    url: https://gitlab.com/remikz/nccmp/-/archive/master/nccmp-master.tar.gz
+build:
+    number: 0
+requirements:
+    build: 
+         - {{ compiler('c') }}
+         - {{ compiler('cxx') }}
+         - {{ compiler('fortran') }}
+         - cmake
+         - libnetcdf
+         - netcdf4 
+         - hdf5
+    run:
+         - libnetcdf
+         - netcdf4 
+about:
+    description: 'nccmp compares two NetCDF files bitwise, semantically or with a user 
+                  defined tolerance (absolute or relative percentage).  Parallel comparisons 
+                  are done in local memory without requiring temporary files.  Highly 
+                  recommended for regression testing scientific models or datasets in a 
+                  test-driven development environment.'
+    doc_url: https://dev.yorhel.nl/ncdu/man
+    home: https://gitlab.com/remikz/nccmp
+    license: GNU GPLv2
+    license_family: GPL2
+    license_file: COPYING
+    summary: Compare 2 NetCDF files
+

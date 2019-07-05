@@ -1,0 +1,23 @@
+package:
+    name: gifsicle
+    version: '1.92'
+source:
+    fn: gifsicle-1.92.tar.gz
+    sha256: 5ab556c01d65fddf980749e3ccf50b7fd40de738b6df679999294cc5fabfce65
+    url: http://www.lcdf.org/gifsicle/gifsicle-1.92.tar.gz
+build:
+    number: '0'
+    script: ./configure --prefix=${PREFIX} && make && make install
+    string: '0'
+requirements:
+    build: []
+    run: []
+about:
+    description: 'Gifsicle is a command-line tool for creating, editing, and getting information about GIF images and animations.'
+    doc_url: http://www.lcdf.org/gifsicle/man.html
+    home: http://www.lcdf.org/gifsicle/
+    license: GNU GPLv2
+    license_family: GPL2
+    license_file: COPYING
+    summary: Tool for creating GIF animations
+

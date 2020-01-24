@@ -1,12 +1,12 @@
-{% set version = "1.8.5" %}
+{% set version = "1.8.6.5" %}
 
 package:
     name: nccmp
     version: {{ version }}
 source:
-    fn: nccmp-master.tar.gz
-    sha256: 1ce20283bc55102537ca7494717214cf33023d547d62b5ff002c796a31b0f679
-    url: https://gitlab.com/remikz/nccmp/-/archive/master/nccmp-master.tar.gz
+    fn: nccmp-{{version}}.tar.gz
+    #sha256: 1ce20283bc55102537ca7494717214cf33023d547d62b5ff002c796a31b0f679
+    url: https://gitlab.com/remikz/nccmp/-/archive/{{version}}/nccmp-{{version}}.tar.gz
 build:
     number: 0
 requirements:
@@ -21,6 +21,9 @@ requirements:
     run:
          - libnetcdf
          - netcdf4 
+test:
+    commands:
+        - nccmp --help
 about:
     description: 'nccmp compares two NetCDF files bitwise, semantically or with a user 
                   defined tolerance (absolute or relative percentage).  Parallel comparisons 

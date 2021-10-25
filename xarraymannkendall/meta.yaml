@@ -1,0 +1,26 @@
+package:
+    name: xarraymannkendall
+    version: 1.0.1
+
+source:
+    git_rev: master
+    git_url: https://github.com/josuemtzmo/xarrayMannKendall
+
+build:
+    noarch: python
+    number: 0
+    script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+    build:
+        - python>=3.6
+        - setuptools
+    run:
+        - python>=3.6
+        - numpy
+        - dask
+        - xarray
+
+about:
+    home: https://github.com/josuemtzmo/xarrayMannKendall
+    license: MIT License
